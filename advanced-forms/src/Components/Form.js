@@ -139,6 +139,7 @@ export default function AdvancedForm() {
                     onChange={inputChange}
                     value={formState.name}
                     />
+                    {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
                 </label><br/>
 
                 <label htmlFor="email">
@@ -150,6 +151,7 @@ export default function AdvancedForm() {
                     onChange={inputChange}
                     value={formState.email}
                     />
+                    {errors.email.length > 0 ? <p className="error">{errors.email}</p> : null}
                 </label><br/>
             
                 <label htmlFor="password" >
@@ -161,6 +163,7 @@ export default function AdvancedForm() {
                     onChange={inputChange}
                     value={formState.password}
                     />
+                    {errors.password.length > 0 ? <p className="error">{errors.password}</p> : null}
                 </label><br/>
 
                 <label htmlFor="benchpress">
@@ -172,6 +175,7 @@ export default function AdvancedForm() {
                     onChange={inputChange}
                     value={formState.benchpress}/>
                     lbs
+                    {errors.benchpress.length > 0 ? <p className="error">{errors.benchpress}</p> : null}
                 </label> <br/>
 
                 <label htmlFor="pullups">
@@ -182,6 +186,7 @@ export default function AdvancedForm() {
                     name="pullups"
                     onChange={inputChange}
                     value={formState.pullups}/>
+                    {errors.pullups.length > 0 ? <p className="error">{errors.pullups}</p> : null}
                 </label> <br/>
 
                 <label htmlFor="squat">
@@ -193,6 +198,7 @@ export default function AdvancedForm() {
                     onChange={inputChange}
                     value={formState.squat}/>
                     lbs
+                    {errors.squat.length > 0 ? <p className="error">{errors.squat}</p> : null}
                 </label> <br/>
 
                 <label htmlFor="checkbox">
@@ -204,6 +210,7 @@ export default function AdvancedForm() {
                     onChange={inputChange}
                     /> 
                     Terms of Service
+                    {errors.terms.checked === false > 0 ? <p className="error">{errors.terms}</p> : null}
                 </label><br/>
 
                 <pre>{JSON.stringify(user,null,2)}</pre>
